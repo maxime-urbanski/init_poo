@@ -1,0 +1,15 @@
+{
+    "name": "maxiloud/init_php",
+    "autoload": {
+        "psr-4": {
+            "Maxiloud\\InitPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Urbanski Maxime",
+            "email": "maxime@les-tilleuls.coop"
+        }
+    ],
+    "require": {}
+}
