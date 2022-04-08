@@ -2,26 +2,22 @@
 
 require_once ('src/Controller/Bycicle.php');
 require_once ('src/Controller/Car.php');
+require_once ('src/Controller/Truck.php');
 
-$rockrider = new Bycicle('black', 56, 3);
+$bicyle = new Bycicle('blue', 1);
 
-var_dump($rockrider);
+echo $bicyle->forward();
+var_dump($bicyle);
 
-$rockrider->color = 'red';
-
-$rockrider->setCurrentspeed(25);
-var_dump($rockrider->getCurrentSpeed());
-
-echo '<h3> Vitesse du velo: ' . $rockrider->getCurrentSpeed() . ' km/h' . '</h3>';
-
-echo $rockrider->brake();
-echo '<h3> Vitesse du velo: ' . $rockrider->getCurrentSpeed() . ' km/h' . '</h3>';
-echo $rockrider->brake();
+$dacua = new Car('green', 5, 'diesel');
+var_dump($dacua);
 
 
-$dacia = new Car('yellow', 5, 'diesel');
+$renault = new Truck("blue", 3, 0, 'fuel');
+$renault->setStockageCapacity(90);
+var_dump($renault->getEnergy());
+var_dump($renault->isFuel());
+$renault->setStockageCapacity(100);
+var_dump($renault->isFuel());
 
-var_dump($dacia);
-
-echo '<h3> Energy de al voiture: ' . $dacia->getEnergy() . '</h3>';
 
