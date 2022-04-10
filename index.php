@@ -1,23 +1,18 @@
 <?php
 
+require_once ('src/Controller/MotorWay.php');
+require_once ('src/Controller/PedestrianWay.php');
+require_once ('src/Controller/ResidentWay.php');
 require_once ('src/Controller/Bycicle.php');
 require_once ('src/Controller/Car.php');
-require_once ('src/Controller/Truck.php');
+require_once ('src/Controller/HighWay.php');
 
-$bicyle = new Bycicle('blue', 1);
+$bike = new Bycicle('red', 1);
+$dacia = new Car('rouge', 5, 'diesel');
+$resident = new ResidentWay(2, 50);
+$motor = new MotorWay(4,130);
 
-echo $bicyle->forward();
-var_dump($bicyle);
+$motor->addVehicle($bike);
+$pedestrian = new PedestrianWay(1,10);
 
-$dacua = new Car('green', 5, 'diesel');
-var_dump($dacua);
-
-
-$renault = new Truck("blue", 3, 0, 'fuel');
-$renault->setStockageCapacity(90);
-var_dump($renault->getEnergy());
-var_dump($renault->isFuel());
-$renault->setStockageCapacity(100);
-var_dump($renault->isFuel());
-
-
+$pedestrian->addVehicle($dacia);

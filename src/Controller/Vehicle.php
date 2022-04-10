@@ -1,7 +1,7 @@
 <?php
 
 
-class Vehicle
+abstract class Vehicle
 {
     protected string $color;
     protected int $currentSpeed;
