@@ -1,8 +1,9 @@
 <?php
 
 require_once 'Vehicle.php';
+require_once 'LightableInterface.php';
 
-class Car extends Vehicle
+class Car extends Vehicle implements LightableInterface
 {
     private string $energy;
     private int $energyLevel;
@@ -53,5 +54,15 @@ class Car extends Vehicle
            throw new Exception('Attention au frein à main !');
         }
         return $this->forward();
+    }
+
+    public function switchOn(): bool
+    {
+        return true;
+    }
+
+    public function switchOff(): bool
+    {
+        return false;
     }
 }

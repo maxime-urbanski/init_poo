@@ -11,7 +11,7 @@ $bike = new Bycicle('red', 1);
 $dacia = new Car('rouge', 5, 'diesel');
 $resident = new ResidentWay(2, 50);
 $motor = new MotorWay(4,130);
-
+$longboard = new Skateboard('black',0);
 $motor->addVehicle($bike);
 $pedestrian = new PedestrianWay(1,10);
 
@@ -27,3 +27,6 @@ try {
 } finally {
     echo "Ma voiture roule comme un donut";
 }
+
+$bike->setCurrentSpeed(25);
+var_dump($bike->switchOn());
