@@ -6,6 +6,8 @@ require_once ('src/Controller/ResidentWay.php');
 require_once ('src/Controller/Bycicle.php');
 require_once ('src/Controller/Car.php');
 require_once ('src/Controller/HighWay.php');
+require_once ('src/Controller/Skateboard.php');
+require_once ('src/Controller/Speedometer.php');
 
 $bike = new Bycicle('red', 1);
 $dacia = new Car('rouge', 5, 'diesel');
@@ -30,3 +32,5 @@ try {
 
 $bike->setCurrentSpeed(25);
 var_dump($bike->switchOn());
+
+var_dump(Speedometer::convertKmToMiles(56));
