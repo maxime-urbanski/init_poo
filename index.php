@@ -16,3 +16,14 @@ $motor->addVehicle($bike);
 $pedestrian = new PedestrianWay(1,10);
 
 $pedestrian->addVehicle($dacia);
+$dacia->setHasParkBreak();
+try {
+    $dacia->start();
+} catch (Exception $e) {
+    var_dump($dacia->getHasParkBrake());
+    $dacia->setHasParkBreak();
+    echo $e;
+    var_dump($dacia->getHasParkBrake());
+} finally {
+    echo "Ma voiture roule comme un donut";
+}
